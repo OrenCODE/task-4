@@ -1,0 +1,12 @@
+<h2>Home Management</h2>
+<div class="card card-body" *ngFor="let todo of todos">
+  <div class="row">
+    <div class="col-sm-8">
+      <h5>{{ todo.description }}</h5>
+      <p>{{ todo.date | date }}</p>
+      <p>{{ todo.memberName }}</p>
+      <hr>
+      <button (click)="removeTodo(todo)" class="btn btn-danger btn-sm"><i class="fa fa-remove"></i></button>
+    </div>
+  </div>
+</div>

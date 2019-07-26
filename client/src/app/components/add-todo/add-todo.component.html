@@ -1,0 +1,15 @@
+<button class="btn btn-light" routerLink="/">Back</button>
+<h2 class="header">Add Todo</h2>
+<div class="card card-body mb-3">
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label>Description</label>
+      <input type="text" class="form-control" [(ngModel)]="description" name="description">
+    </div>
+    <select (change)="selectMember($event)">
+      <option value="">Family members</option>
+      <option *ngFor="let member of members" [value]="member.role">{{ member.role }}</option>
+    </select>
+    <input type="submit" value="Submit" class="btn-primary">
+  </form>
+</div>
